@@ -1,0 +1,36 @@
+#root {
+    $background-image: linear-gradient(to right, orange 0%, black 100%)
+}
+
+.listing {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 20px;
+  border: 1px solid black;
+  .cardContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      border: 1px solid black;
+      padding: 10px;
+      img {
+        height: 180px;
+      }
+      .ratingContainer {
+        // background-image: linear-gradient(to right, orange 80%, black 20%);
+        // -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.header {
+    background-color: rgb(0, 0, 35);
+    color: whitesmoke;
+    padding: 10px 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        font-weight: 900;
+        cursor: pointer;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            font-weight: 600;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+    }
+}

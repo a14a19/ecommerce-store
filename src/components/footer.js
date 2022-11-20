@@ -1,10 +1,10 @@
-import classes from './footer.module.css';
+import classes from './footer.module.scss';
 
 function Footer() {
     return (
-        <>
-            <div>Footer components</div>
-        </>
+        <div className={classes.footer}>
+            <div> &copy; Anas Ahmed </div>
+        </div>
     )
 }
 
