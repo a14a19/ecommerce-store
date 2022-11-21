@@ -13,6 +13,16 @@ function Filter({ range, setRange, rating, setRating }) {
     return (
         <div className={classes.filter}>
             <h3>Filters</h3>
+            <label>Category</label>
+            <select>
+                <option>All</option>
+                <option>smartphones</option>
+                <option>laptops</option>
+                <option>fragrances</option>
+                <option>skincare</option>
+                <option>groceries</option>
+                <option>home-decoration</option>
+            </select>
             <label>Price : {range} </label>
             <input
                 type="range"

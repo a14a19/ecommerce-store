@@ -1,31 +1,39 @@
 .filter {
-    margin: 10px;
-    margin-top: 85px;
-    // height: calc(100vh - 135px);
-    background-color: white;
-    color: black;
-    padding: 10px 10px 30px 10px;
-    display: flex;
-    flex-direction: column;
+  margin: 10px;
+  margin-top: 85px;
+  // height: calc(100vh - 135px);
+  background-color: white;
+  color: black;
+  padding: 10px 10px 30px 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  label {
+    margin-top: 15px;
+  }
+  select {
+    width: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
     border-radius: 5px;
-    label {
-        margin-top: 15px;
-    }
-    input {
-        cursor: pointer;
-    }
+    margin-top: 8px;
+  }
+  input {
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 768px) {
-    .filter {
-        margin-top: 65px;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        label {
-            margin-top: 0px;
-            margin-left: 10px;
-            margin-right: 5px;
-        }
+  .filter {
+    margin-top: 65px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    label {
+      margin-top: 0px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
+  }
 }

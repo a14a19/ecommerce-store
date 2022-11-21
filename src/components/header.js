@@ -1,38 +1,29 @@
 import classes from './header.module.scss';
+import { Link, NavLink } from 'react-router-dom';
 
 function Header({ setSearch }) {
 
-    const inputSearch = (e) => {
-        setSearch(e.target.value)
-    }
-
     return (
         <div className={classes.header}>
-            <h1>E-Commerce</h1>
-            <div>
-                <input 
-                    className={classes.searchInput}
-                    onChange={inputSearch}
-                />
-                <select> 
-                    <option>All</option>
-                    <option>smartphones</option>
-                    <option>laptops</option>
-                    <option>fragrances</option>
-                    <option>skincare</option>
-                    <option>groceries</option>
-                    <option>home-decoration</option>
-                </select>
-            </div>
+            <Link to='/'>
+                <h1>
+                    E-Commerce
+                </h1>
+            </Link>
             <ul>
                 <li>
-                    WishList
+                    <NavLink to='/search'>
+                        <i className="fa-solid fa-magnifying-glass" title='Search'></i>
+                    </NavLink>
                 </li>
                 <li>
-                    Cart
+                    <i className="fa-solid fa-heart" title='Wishlist'></i>
                 </li>
                 <li>
-                    Profile
+                    <i className="fa-solid fa-cart-shopping" title='Cart'></i>
+                </li>
+                <li>
+                    <i className="fa-solid fa-user" title='Profile'></i>
                 </li>
             </ul>
         </div>
