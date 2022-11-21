@@ -3,7 +3,6 @@ import classes from './filter.module.scss';
 function Filter({ range, setRange, rating, setRating }) {
 
     const changeRange = (e) => {
-        console.log(range);
         setRange(e.target.value)
     }
 
