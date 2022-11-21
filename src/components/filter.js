@@ -14,7 +14,7 @@ function Filter({ range, setRange, rating, setRating }) {
     return (
         <div className={classes.filter}>
             <h3>Filters</h3>
-            <label>Price : {range}</label>
+            <label>Price : {range} </label>
             <input
                 type="range"
                 min='0'
@@ -22,7 +22,7 @@ function Filter({ range, setRange, rating, setRating }) {
                 step='100'
                 onChange={changeRange}
             />
-            <label htmlFor='rating'>Rating : {rating}</label>
+            <label htmlFor='rating'>Rating : {rating} </label>
             <input
                 type="range"
                 id='rating'

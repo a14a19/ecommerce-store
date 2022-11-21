@@ -6,4 +6,11 @@
     min-height: calc(100vh - 115px);
     background-color: rgb(235, 235, 235);
   }
+  @media screen and (max-width: 768px) {
+    .mainContainer {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
 }

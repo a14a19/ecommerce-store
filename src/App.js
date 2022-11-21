@@ -12,7 +12,7 @@ function App() {
 
   const [ range, setRange] = useState(2000)
 
-  const [ rating, setRating] = useState(2000)
+  const [ rating, setRating] = useState(5)
 
   const [ search, setSearch] = useState('')
 
