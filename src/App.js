@@ -10,14 +10,18 @@ function App() {
 
   const [ card, setCard] = useState(Data)
 
-  const [ range, setRange] = useState(0)
+  const [ range, setRange] = useState(2000)
+
+  const [ rating, setRating] = useState(2000)
+
+  const [ search, setSearch] = useState('')
 
   return (
     <div className={classes.App}>
-      <Header />
+      <Header setSearch={setSearch}/>
       <main className={classes.mainContainer}>
-        <Filter setRange={setRange} />
-        <Listing data={card} />
+        <Filter setRange={setRange} range={range} setRating={setRating} rating={rating}/>
+        <Listing data={card} range={range} search={search} rating={rating}/>
       </main>
       <Footer />
     </div>

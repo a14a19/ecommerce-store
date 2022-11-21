@@ -1,31 +1,34 @@
 import classes from './filter.module.scss';
 
-function Filter({ setRange }) {
+function Filter({ range, setRange, rating, setRating }) {
 
-    // const changeRange = (e) => {
-    //     console.log(e.target.value);
-    //     setRange(e.target.value)
-    // }
+    const changeRange = (e) => {
+        console.log(range);
+        setRange(e.target.value)
+    }
+
+    const changeRating = (e) => {
+        setRating(e.target.value)
+    }
 
     return (
         <div className={classes.filter}>
             <h3>Filters</h3>
-            <label htmlFor='price'>Price</label>
+            <label>Price : {range}</label>
             <input
                 type="range"
-                id='price'
                 min='0'
                 max='2000'
                 step='100'
-                // onChange={() => changeRange()}
+                onChange={changeRange}
             />
-            <label htmlFor='rating'>Rating</label>
+            <label htmlFor='rating'>Rating : {rating}</label>
             <input
                 type="range"
                 id='rating'
                 min='0'
                 max='5'
-                // onChange={() => changeRange()}
+                onChange={changeRating}
             />
         </div>
     )

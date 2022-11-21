@@ -1,11 +1,19 @@
 import classes from './header.module.scss';
 
-function Header() {
+function Header({ setSearch }) {
+
+    const inputSearch = (e) => {
+        setSearch(e.target.value)
+    }
+
     return (
         <div className={classes.header}>
             <h1>E-Commerce</h1>
             <div>
-                <input className={classes.searchInput}/>
+                <input 
+                    className={classes.searchInput}
+                    onChange={inputSearch}
+                />
                 <select> 
                     <option>All</option>
                     <option>smartphones</option>
