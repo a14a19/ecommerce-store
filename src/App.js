@@ -24,22 +24,22 @@ function App() {
   const [card, setCard] = useState(Data)
   const [range, setRange] = useState(2000)
   const [rating, setRating] = useState(5)
-  const [select, setSelect] = useState('')
+  const [select, setSelect] = useState('Products')
 
   const selectActive = (e) => {
-    console.log(e);
     setSelect(e)
     setCard(Data.filter(data => data.category === e))
   }
-
   const rangeActive = (e) => {
     setRange(e)
     setCard(Data.filter(data => data.price <= e))
   }
-
   const ratingActive = (e) => {
     setRating(e)
     setCard(Data.filter(data => data.rating <= e))
+  }
+  const searchResult = (e) => {
+    console.log(e);
   }
 
   return (
@@ -59,17 +59,11 @@ function App() {
                   rangeActive={rangeActive} 
                   ratingActive={ratingActive}
                 />
-                <Listing 
-                  data={card} 
-                  range={range} 
-                  select={select} 
-                  rating={rating} 
-                  setCard={setCard} 
-                />
+                <Listing data={card} select={select}/>
               </main>
             }
           />
-          <Route exact path='/search' element={<Search />} />
+          <Route exact path='/search' element={<Search searchResult={searchResult}/>} />
           <Route exact path='/about' element={<About />} />
         </Routes>
         <Footer />

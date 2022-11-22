@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classes from './listing.module.scss';
 
-function Listing({ data, rating }) {
+function Listing({ data, select }) {
 
     let [page, setPage] = useState(1)
     
@@ -54,6 +54,9 @@ function Listing({ data, rating }) {
 
     return (
         <div className={classes.listing}>
+            <h2>
+                {select}
+            </h2>
             <div className={classes.cardContainer}>
                 {cardDetail}
             </div>

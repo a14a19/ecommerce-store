@@ -1,9 +1,14 @@
 import classes from './search.module.scss';
 
-function Search() {
+function Search({ searchResult }) {
+
+    const searchUpdate = (e) => {
+        searchResult(e.target.value)
+    }
+
     return (
         <div className={classes.search}>
-            <input type='text' />
+            <input type='text' placeholder='Search here...' onChange={searchUpdate}/>
         </div>
     )
 }
