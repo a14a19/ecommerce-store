@@ -1,27 +1,33 @@
 import classes from './filter.module.scss';
 
-function Filter({ range, setRange, rating, setRating }) {
+function Filter({ range, rating, option, selectActive, rangeActive, ratingActive }) {
 
     const changeRange = (e) => {
-        setRange(e.target.value)
+        rangeActive(e.target.value)
     }
 
     const changeRating = (e) => {
-        setRating(e.target.value)
+        ratingActive(e.target.value)
+    }
+
+    const selectFnOpt = (e) => {
+        selectActive(e.target.value)
     }
 
     return (
         <div className={classes.filter}>
             <h3>Filters</h3>
             <label>Category</label>
-            <select>
-                <option>All</option>
-                <option>smartphones</option>
-                <option>laptops</option>
-                <option>fragrances</option>
-                <option>skincare</option>
-                <option>groceries</option>
-                <option>home-decoration</option>
+            <select onChange={selectFnOpt}>
+                {
+                    Object.keys(option).map(function (key, i) {
+                        return (
+                            <option key={i}>
+                                {option[key]}
+                            </option>
+                        )
+                    })
+                }
             </select>
             <label>Price : {range} </label>
             <input

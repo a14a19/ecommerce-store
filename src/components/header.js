@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 function Header({ setSearch }) {
 
     return (
-        <div className={classes.header}>
+        <header className={classes.header}>
             <Link to='/'>
                 <h1>
                     E-Commerce
@@ -26,7 +26,7 @@ function Header({ setSearch }) {
                     <i className="fa-solid fa-user" title='Profile'></i>
                 </li>
             </ul>
-        </div>
+        </header>
     )
 }
 

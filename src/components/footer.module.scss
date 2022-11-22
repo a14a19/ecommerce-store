@@ -5,7 +5,12 @@
     padding: 15px 30px;
     background-color: rgb(0, 0, 35);
     color: whitesmoke;
-    div {
-        font-weight: 600;
+    font-weight: 600;
+    a {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+        padding-right: 15px;
+        border-right: 1px solid white;
     }
 }
