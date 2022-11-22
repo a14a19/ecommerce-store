@@ -49,7 +49,7 @@ function Listing({ data, select }) {
                     </div>
                 </div>
                 <div className={classes.wishlist} title='Add to Wishlist'>
-                    <i class="fa-solid fa-heart"></i>
+                    <i className="fa-solid fa-heart"></i>
                 </div>
             </div>
         )

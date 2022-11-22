@@ -38,10 +38,11 @@
       background-color: white;
       box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
       position: relative;
-      max-width: 420px;
+      max-width: 550px;
       border-radius: 5px;
       overflow: hidden;
       cursor: pointer;
+      width: 100%;
       &:hover {
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.6);
         scale: 1.01;
@@ -140,6 +141,12 @@
         padding: 7px;
         font-size: 12px;
       }
+    }
+  }
+  @media screen and (min-width: 1700px) {
+    .cardContainer {
+      grid-template-columns: auto auto auto auto;
+      place-items: center;
     }
   }
   @media screen and (max-width: 1024px) {
