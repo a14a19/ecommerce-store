@@ -4,15 +4,15 @@ import classes from './listing.module.scss';
 function Listing({ data, select }) {
 
     let [page, setPage] = useState(1)
-    
+
     const totalPage = Math.ceil(data.length / 12)
-    
+
     const updatePage = (value) => {
         setPage(page + value)
     }
-    
+
     const cardDetail = data.map((item, i) => {
-        
+
         const firstColor = ((item.rating / 5.00) * 100)
         const secondColor = 100 - firstColor;
 
@@ -48,6 +48,9 @@ function Listing({ data, select }) {
                         <i className={`${classes.icon} fa-solid fa-star`}></i>
                     </div>
                 </div>
+                <div className={classes.wishlist} title='Add to Wishlist'>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
             </div>
         )
     })
@@ -61,15 +64,15 @@ function Listing({ data, select }) {
                 {cardDetail}
             </div>
             <div className={classes.pages}>
-                <button 
-                    disabled={page === 1} 
+                <button
+                    disabled={page === 1}
                     onClick={() => updatePage(-1)}
                 >
                     <i className="fa-solid fa-chevron-left"></i>
                 </button>
                 {page} out of {totalPage} pages
-                <button 
-                    disabled={page === 3} 
+                <button
+                    disabled={page === 3}
                     onClick={() => updatePage(1)}
                 >
                     <i className="fa-solid fa-chevron-right"></i>

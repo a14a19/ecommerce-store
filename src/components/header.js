@@ -17,7 +17,9 @@ function Header({ setSearch }) {
                     </NavLink>
                 </li>
                 <li>
-                    <i className="fa-solid fa-heart" title='Wishlist'></i>
+                    <NavLink to='/wishlist'>
+                        <i className="fa-solid fa-heart" title='Wishlist'></i>
+                    </NavLink>
                 </li>
                 <li>
                     <i className="fa-solid fa-cart-shopping" title='Cart'></i>

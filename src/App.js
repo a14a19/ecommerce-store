@@ -4,8 +4,12 @@ import Listing from './components/listing';
 import Filter from './components/filter';
 import Footer from './components/footer';
 import Search from './components/search';
-import About from './components/about';
 import Data from './components/data.json';
+
+import About from './pages/about';
+import Wishlist from './pages/wishlist';
+import PageNotFound from './pages/PageNotFound';
+
 import { useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
@@ -65,6 +69,8 @@ function App() {
           />
           <Route exact path='/search' element={<Search searchResult={searchResult}/>} />
           <Route exact path='/about' element={<About />} />
+          <Route exact path='/wishlist' element={<Wishlist />} />
+          <Route exact path='*' element={< PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
