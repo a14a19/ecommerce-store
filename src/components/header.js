@@ -10,7 +10,6 @@ function Header() {
     const clickMenu = (e) => {
         e.preventDefault()
         setActive(!isActive)
-        console.log("from menu", isActive);
     }
 
     return (

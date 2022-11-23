@@ -27,7 +27,6 @@ function Filter({ range, rating, option, selectActive, rangeActive, ratingActive
     const clicking = (e) => {
         e.preventDefault()
         setActive(!isActive)
-        console.log(isActive);
     }
 
     return (
