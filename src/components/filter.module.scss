@@ -1,6 +1,6 @@
 .filter {
   margin: 10px;
-  margin-top: 90px;
+  margin-top: 75px;
   // height: calc(100vh - 135px);
   background-color: white;
   color: black;
@@ -38,7 +38,7 @@
 }
 @media screen and (max-width: 900px) {
   .filter {
-    margin-top: 83px;
+    margin-top: 63px;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -83,6 +83,6 @@
 
 @media screen and (max-width: 660px) {
   .filter {
-    margin-top: 72px;
+    margin-top: 52px;
   }
 }
