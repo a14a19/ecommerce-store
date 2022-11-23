@@ -14,7 +14,6 @@ import { useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 const option = {
-  all: 'All',
   sm: 'smartphones',
   lp: 'laptops',
   fg: 'fragrances',
