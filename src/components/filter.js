@@ -60,7 +60,6 @@ function Filter({ range, rating, option, selectActive, rangeActive, ratingActive
                         type="range"
                         min='0'
                         max='2000'
-                        step='100'
                         onChange={changeRange}
                     />
                 </li>
@@ -68,7 +67,6 @@ function Filter({ range, rating, option, selectActive, rangeActive, ratingActive
                     <label className={classes.filterName}>Rating : {rating} </label>
                     <input
                         type="range"
-                        id='rating'
                         min='0'
                         max='5'
                         onChange={changeRating}
