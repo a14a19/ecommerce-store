@@ -25,12 +25,9 @@ const option = {
 function App() {
 
   const [card, setCard] = useState(Data)
-  const [change, setChange] = useState({ price: 2000, rating: 5, category: 'Products'})
+  const [change, setChange] = useState({ price: 2000, rating: 5, category: 'Products' })
 
-  useEffect(() => {
-      setCard(Data)
-  }, [])
-  
+
   const changeActive = (e) => {
     setChange(e)
     setCard(Data.filter((data) => data.category === e.category && data.price <= e.price && data.rating <= e.rating))
@@ -49,17 +46,17 @@ function App() {
             exact path='/'
             element={
               <main className={classes.mainContainer}>
-                <Filter 
-                  option={option} 
+                <Filter
+                  option={option}
                   change={change}
                   setChange={setChange}
                   changeActive={changeActive}
                 />
-                <Listing data={card} change={change}/>
+                <Listing data={card} change={change} />
               </main>
             }
           />
-          <Route exact path='/search' element={<Search searchResult={searchResult}/>} />
+          <Route exact path='/search' element={<Search searchResult={searchResult} />} />
           <Route exact path='/about' element={<About />} />
           <Route exact path='/wishlist' element={<Wishlist />} />
           <Route exact path='*' element={< PageNotFound />} />
