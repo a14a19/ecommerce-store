@@ -10,7 +10,7 @@ import About from './pages/about';
 import Wishlist from './pages/wishlist';
 import PageNotFound from './pages/PageNotFound';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 const option = {
@@ -25,22 +25,17 @@ const option = {
 function App() {
 
   const [card, setCard] = useState(Data)
-  const [range, setRange] = useState(2000)
-  const [rating, setRating] = useState(5)
-  const [select, setSelect] = useState('Products')
+  const [change, setChange] = useState({ price: 2000, rating: 5, category: 'Products'})
 
-  const selectActive = (e) => {
-    setSelect(e)
-    setCard(Data.filter(data => data.category === e))
+  useEffect(() => {
+      setCard(Data)
+  }, [])
+  
+  const changeActive = (e) => {
+    setChange(e)
+    setCard(Data.filter((data) => data.category === e.category && data.price <= e.price && data.rating <= e.rating))
   }
-  const rangeActive = (e) => {
-    setRange(e)
-    setCard(Data.filter(data => data.price <= e))
-  }
-  const ratingActive = (e) => {
-    setRating(e)
-    setCard(Data.filter(data => data.rating <= e))
-  }
+
   const searchResult = (e) => {
     console.log(e);
   }
@@ -55,14 +50,12 @@ function App() {
             element={
               <main className={classes.mainContainer}>
                 <Filter 
-                  range={range} 
-                  rating={rating} 
                   option={option} 
-                  selectActive={selectActive} 
-                  rangeActive={rangeActive} 
-                  ratingActive={ratingActive}
+                  change={change}
+                  setChange={setChange}
+                  changeActive={changeActive}
                 />
-                <Listing data={card} select={select}/>
+                <Listing data={card} change={change}/>
               </main>
             }
           />
